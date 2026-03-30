@@ -1,2 +1,2 @@
 def solution(string):
-    return ''.join(list(string)[::-1])
+    return string[::-1]
