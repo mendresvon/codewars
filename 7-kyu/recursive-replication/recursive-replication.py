@@ -4,4 +4,3 @@ def replicate(times, number):
         return []
     
     return replicate(times-1, number) + [number]
-    
