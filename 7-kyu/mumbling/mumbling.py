@@ -1,2 +1,2 @@
 def accum(st):
-    return "-".join(c.upper() + c.lower() * i for i, c in enumerate(st))
+    return "-".join((c * i).capitalize() for i, c in enumerate(st, 1))
