@@ -1,3 +1,6 @@
 def square_digits(num):
-    num = str(num)
-    return int("".join([str(int(n)**2) for n in num]))
+    res = ""
+    for n in str(num):
+        res += str(int(n) ** 2)
+    
+    return int(res)
