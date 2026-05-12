@@ -1,7 +1,4 @@
+from collections import Counter
 def count(s):
-    count = {}
-    
-    for char in s:
-        count[char] = 1 + count.get(char, 0)
-    
-    return count
+    # The function code should be here
+    return Counter(s)
