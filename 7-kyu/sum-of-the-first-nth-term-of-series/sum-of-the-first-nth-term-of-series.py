@@ -1,12 +1,7 @@
 def series_sum(n):
-    if not n: return '0.00'
+    res = 0
     
-    denominator = 4
-    res = 1
-    
-    for i in range(1, n):
-        rate = 1/denominator
-        res += (rate)
-        denominator += 3
+    for i in range(n):
+        res += 1 / (1 + 3 * float(i))
     
     return f"{res:.2f}"
