@@ -1,10 +1,10 @@
 def calculate_years(principal, interest, tax, desired):
+    balance = principal
     years = 0
-    curr_balance = principal
     
-    while curr_balance < desired:
-        total_interest = curr_balance * interest * (1.0 - tax)
-        curr_balance += total_interest
+    while balance < desired:
+        yearly_interest = balance * (interest * (1-tax))
+        balance += yearly_interest
         years += 1
     
     return years
