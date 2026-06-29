@@ -1,19 +1,19 @@
 def diamond(n):
-    if n < 0 or n%2 == 0:
-        return None
-    
+    # Make some diamonds!
+    if n < 0 or n%2 == 0: return None
     mid = n // 2
     res = ""
+    
     for i in range(n):
-        # calc how far current iteration is from mid
+        # calculate how far we are from the midpoint
         dist = abs(mid - i)
         spaces = dist
-        stars  = n - (2*dist)
+        stars = n - (dist*2)
         
-        for j in range(spaces):
-            res += " "
-        for k in range(stars):
-            res += "*" 
+        # add spaces
+        res += " " * spaces
+        # add stars
+        res += "*" * stars
         res += "\n"
     
     return res
