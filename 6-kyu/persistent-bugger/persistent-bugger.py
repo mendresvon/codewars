@@ -1,0 +1,12 @@
+from math import prod
+​
+def persistence(n):
+    digits = [int(d) for d in str(n)]
+    count = 0
+    
+    while len(digits) > 1:
+        product = prod(digits)
+        digits = [int(d) for d in str(product)]
+        count += 1
+    
+    return count
