@@ -1,12 +1,12 @@
 def persistence(n):
-    digits = [int(d) for d in str(n)]
+    n = str(n)
     count = 0
     
-    while len(digits) > 1:
+    while len(n) > 1:
         product = 1
-        for d in digits:
-            product *= d
-        digits = [int(d) for d in str(product)]
+        for d in n:
+            product *= int(d)
+        n = str(product)
         count +=1 
     
     return count
