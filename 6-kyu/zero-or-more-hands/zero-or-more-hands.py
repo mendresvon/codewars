@@ -3,25 +3,19 @@ from preloaded import Hand;
 (NONE,LEFT,RIGHT,BOTH) = Hand;
 ​
 def which_hand(word: Iterable[str]) -> Hand:
-    left_char = set("qwertasdfgzxcvb")
-    right_char = set("yuiophjklnm")
-    seen_left = False
-    seen_right = False
+    left_chars = set("qwertasdfgzxcvb")
+    right_chars = set("yuiophjklnm")
+    
+    left_used = False
+    right_used = False
     
     for char in word:
-        # check which hand
-        if char in left_char:
-            seen_left = True
-        if char in right_char:
-            seen_right = True
+        if char in left_chars:
+            left_used = True
+        elif char in right_chars:
+            right_used = True
         
-        # check if both hands have been seen
-        if seen_left and seen_right:
+        if left_used and right_used:
             return BOTH
-        
-    if seen_left:
-        return LEFT
-    elif seen_right:
-        return RIGHT
-    else:
-        return NONE
+    
+    return LEFT if left_used else RIGHT if right_used else NONE
