@@ -7,6 +7,5 @@ def find_even_index(arr):
         if l_sum == r_sum:
             return i
         l_sum += arr[i]
-        
     
     return -1
