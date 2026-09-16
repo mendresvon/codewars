@@ -1,2 +1,3 @@
 def stairs_in_20(stairs):
-    return sum(sum(stair) for stair in stairs) * 20
+    year = sum(sum(stair) for stair in stairs)
+    return year * 20
