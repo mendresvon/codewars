@@ -1,12 +1,10 @@
 from preloaded import DECK
 ​
 def define_suit(card):
-    match card[-1]:
-        case 'C':
-            return "clubs"
-        case 'D':
-            return "diamonds"
-        case 'H':
-            return "hearts"
-        case 'S':
-            return "spades"
+    d = {
+        'C': 'clubs',
+        'D': 'diamonds',
+        'H': 'hearts',
+        'S': 'spades',
+    }
+    return d[card[-1]]
