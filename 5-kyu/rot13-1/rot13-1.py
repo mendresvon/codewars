@@ -1,16 +1,12 @@
 def rot13(message):
-    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     res = []
     for char in message:
         if char.isalpha():
-            if char.isupper():
-                new_idx = (ord(char.lower()) - ord('a') + 13) % 26
-                new_char = alphabet[new_idx].upper()
-                res.append(new_char)
+            if char.islower():
+                new_char = chr((ord(char) - ord('a') + 13) % 26 + ord('a'))
             else:
-                new_idx = (ord(char.lower()) - ord('a') + 13) % 26
-                new_char = alphabet[new_idx]
-                res.append(new_char)
+                new_char = chr((ord(char) - ord('A') + 13) % 26 + ord('A'))
+            res.append(new_char)
         else:
             res.append(char)
     
